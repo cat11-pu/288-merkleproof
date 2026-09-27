@@ -1,0 +1,15 @@
+{
+  "budget": 2,
+  "leaves": ["a", "b", "c", "d"],
+  "root": 424,
+  "index_error_code": "E_INDEX_RANGE",
+  "duplicate_error_code": "E_DUPLICATE_PROOF",
+  "event_error_code": "E_BAD_EVENT",
+  "state": { "root": 424, "verified": [], "failed": [], "ledger": [], "applied": [] },
+  "events": [
+    { "id": 1, "kind": "prove", "index": 2, "path": [100, 105] },
+    { "id": 2, "kind": "prove", "index": 0, "path": [98, 169] },
+    { "id": 3, "kind": "prove", "index": 1, "path": [97, 169] },
+    { "id": 4, "kind": "prove", "index": 3, "path": [99, 888] }
+  ]
+}
