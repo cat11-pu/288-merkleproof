@@ -1,8 +1,15 @@
-// merkletree.js：父节点与证明校验（基线：一律给零）
+// merkletree.js：父节点与证明校验
 export function parentOf(left, right) {
-  return 0;
+  return (left * 31 + right) % 1000;
 }
 
 export function verifyPath(leaf, index, path) {
-  return 0;
+  let value = leaf;
+  let spot = index;
+  path.forEach(function (sibling) {
+    if (spot % 2 === 0) value = parentOf(value, sibling);
+    else value = parentOf(sibling, value);
+    spot = Math.floor(spot / 2);
+  });
+  return value;
 }
